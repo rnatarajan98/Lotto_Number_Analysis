@@ -9,6 +9,12 @@ class Result:
     def get_date(self):
         return self.Date
 
+    def get_ball(self, index):
+        if index >= 0 and index <= 6:
+            return self.Balls[index]
+        else:
+            return None
+
     def get_balls6(self):
         return self.Balls[0:6]
 
