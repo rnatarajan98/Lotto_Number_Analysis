@@ -4,7 +4,7 @@ class Result:
 
         self.Balls = []
         for b in row[1:8]:
-            self.Balls.append(b)
+            self.Balls.append(int(b))
 
     def get_date(self):
         return self.Date
@@ -24,3 +24,5 @@ class Result:
     def get_powerball(self):
         return self.Balls[6]
 
+    def as_dict(self):
+        return {'Date': self.Date, 'Ball1': self.Balls[0], 'Ball2': self.Balls[1], 'Ball3': self.Balls[2], 'Ball4': self.Balls[3], 'Ball5': self.Balls[4], 'Ball6': self.Balls[5], 'Ball7': self.Balls[6]}
